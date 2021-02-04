@@ -37,12 +37,12 @@
 
     <!--Optional user inputs-->
     <label asp-for="Edit">Edit: </label>
-    <input type="radio" value="Yes" asp-for="Edit" name="yes_no" /> Yes
-    <input type="radio" value="No" asp-for="Edit" name="yes_no" /> No
+    Yes @Html.RadioButtonFor(x => x.Edit, "Yes")
+    No @Html.RadioButtonFor(x => x.Edit, "No")
     <br />
-    
+
     <label asp-for="LendTo">Lent-to: </label>
-    <input asp-for="LendTo"/>
+    <input asp-for="LendTo" />
     <br />
 
     <label asp-for="Notes">Notes: </label>
@@ -53,4 +53,4 @@
     <button type="submit">Add Movie</button>
 </form>
 <br />
-<button><a asp-controller="Home" asp-action="MovieList">Go to Movie List</a></button>
+<a asp-controller="Home" asp-action="MovieList" style="text-decoration: none; background-color: rgb(238, 238, 238); color: black; padding: 5px; border: 2px solid black;">Go to Movie List</a>
